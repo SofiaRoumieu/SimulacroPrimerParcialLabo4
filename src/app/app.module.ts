@@ -13,6 +13,7 @@ import { ActorListadoComponent } from './general/actores/actor-listado/actor-lis
 import { PeliculasListadoComponent } from './general/peliculas/peliculas-listado/peliculas-listado.component';
 import { LoginComponent } from './general/ingreso/page/login/login.component';
 import { RegistroComponent } from './general/ingreso/page/registro/registro.component';
+import { ComponentePruebaComponent } from './componente-prueba/componente-prueba.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { RegistroComponent } from './general/ingreso/page/registro/registro.comp
     ActorListadoComponent,
     PeliculasListadoComponent,
     LoginComponent,
-    RegistroComponent
+    RegistroComponent,
+    ComponentePruebaComponent
   ],
   imports: [
     BrowserModule,
