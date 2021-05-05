@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { BienvenidosComponent } from './general/page/bienvenidos/bienvenidos.component';
@@ -11,9 +12,18 @@ import { BusquedaComponent } from './general/page/busqueda/busqueda.component';
 import { ActorAltaComponent } from './general/actores/actor-alta/actor-alta.component';
 import { ActorListadoComponent } from './general/actores/actor-listado/actor-listado.component';
 import { PeliculasListadoComponent } from './general/peliculas/peliculas-listado/peliculas-listado.component';
-import { LoginComponent } from './general/ingreso/page/login/login.component';
-import { RegistroComponent } from './general/ingreso/page/registro/registro.component';
-import { ComponentePruebaComponent } from './componente-prueba/componente-prueba.component';
+//import { LoginComponent } from './general/ingreso/page/login/login.component';
+//import { RegistroComponent } from './general/ingreso/page/registro/registro.component';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { IngresoModule } from './ingreso/ingreso.module';
+import { CuadroComponent } from './general/componente/cuadro/cuadro.component';
+import { TablaPeliculaComponent } from './componente/tabla-pelicula/tabla-pelicula.component';
+import { ActoresComponent } from './general/page/actores/actores.component';
+import { TablaPaisesComponent } from './componente/tabla-paises/tabla-paises.component';
+import { FiltroPipe } from './pipes/filtro.pipe';
+import { MenuComponent } from './componente/menu/menu.component';
+
 
 @NgModule({
   declarations: [
@@ -25,13 +35,22 @@ import { ComponentePruebaComponent } from './componente-prueba/componente-prueba
     ActorAltaComponent,
     ActorListadoComponent,
     PeliculasListadoComponent,
-    LoginComponent,
-    RegistroComponent,
-    ComponentePruebaComponent
+    //LoginComponent,
+    //RegistroComponent,
+    CuadroComponent,
+    TablaPeliculaComponent,
+    ActoresComponent,
+    TablaPaisesComponent,
+    FiltroPipe,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    IngresoModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
