@@ -1,0 +1,14 @@
+table{
+    border-radius: 2rem;
+    text-align: center;
+}
+@media screen and (max-width: 800px)
+{
+   table{
+       width: auto;
+       height: auto;
+   }
+   .container{
+       justify-content: left;
+   }
+}

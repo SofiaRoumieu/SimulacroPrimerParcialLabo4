@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactoComponent implements OnInit {
 
+  public colorMensaje:string ="ningun color";
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
+ 
+  CambiarColor(color:string){
+    this.colorMensaje=color;
+  }
 }
